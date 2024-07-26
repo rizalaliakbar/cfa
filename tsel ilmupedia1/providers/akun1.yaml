@@ -1,0 +1,16 @@
+proxies:
+  - name: Satu
+    server: 104.26.7.171
+    port: 443
+    type: vless
+    uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id.masfen.my.id
+    network: ws
+    ws-opts:
+      path: /?ed/u003d2048
+      headers:
+        Host: id.masfen.my.id
+    udp: true
