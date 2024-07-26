@@ -47,21 +47,24 @@ dns:
 #
 proxy-providers:
   Satu:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun1.yaml
     path: "./akun1.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Dua:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun2.yaml
     path: "./akun2.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Tiga:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun3.yaml
     path: "./akun3.yaml"
     health-check:
       enable: true
@@ -69,14 +72,16 @@ proxy-providers:
       interval: 300
 #
   DSB1:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb1.yaml
     path: "./dsb1.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   DSB2:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb2.yaml
     path: "./dsb2.yaml"
     health-check:
       enable: true
@@ -161,23 +166,28 @@ proxy-groups:
 #
 rule-providers:
   Direct:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/direct.yaml
     behavior: classical
     path: "./direct.yaml"
   Reject:
-    type: file
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/reject.yaml
     behavior: classical
     path: "./reject.yaml"
   Streaming:
     type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/streaming.yaml
     behavior: classical
     path: "./streaming.yaml"
   Youtube:
     type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/youtube.yaml
     behavior: classical
     path: "./youtube.yaml"
   Umum:
     type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/umum.yaml
     behavior: classical
     path: "./umum.yaml"
 #
