@@ -48,7 +48,7 @@ dns:
 proxy-providers:
   Satu:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun1.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/providers%20files/akun1.yaml?token=GHSAT0AAAAAACVLDBG34LGR2AQC35WECXOWZVD4JZQ
     path: "./akun1.yaml"
     health-check:
       enable: true
@@ -56,7 +56,7 @@ proxy-providers:
       interval: 300
   Dua:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun2.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/providers%20files/akun2.yaml?token=GHSAT0AAAAAACVLDBG2HU75IJW4HS6QGOH2ZVD4KIQ
     path: "./akun2.yaml"
     health-check:
       enable: true
@@ -64,7 +64,7 @@ proxy-providers:
       interval: 300
   Tiga:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun3.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/providers%20files/akun3.yaml?token=GHSAT0AAAAAACVLDBG2YDOIZ5N47Y7IVYMAZVD4LIQ
     path: "./akun3.yaml"
     health-check:
       enable: true
@@ -73,7 +73,7 @@ proxy-providers:
 #
   DSB1:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/dsb1.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/providers%20files/dsb1.yaml?token=GHSAT0AAAAAACVLDBG2O5NOKIWKSQ57VUJIZVD4LYA
     path: "./dsb1.yaml"
     health-check:
       enable: true
@@ -81,7 +81,7 @@ proxy-providers:
       interval: 300
   DSB2:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/dsb2.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/providers%20files/dsb2.yaml?token=GHSAT0AAAAAACVLDBG2QIPPFEGBXUBRDMMOZVD4MYQ
     path: "./dsb2.yaml"
     health-check:
       enable: true
@@ -167,27 +167,27 @@ proxy-groups:
 rule-providers:
   Direct:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/direct.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/rule%20providers%20files/direct.yaml?token=GHSAT0AAAAAACVLDBG2CT5AGPUMUQKS47YYZVD4QYQ
     behavior: classical
     path: "./direct.yaml"
   Reject:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/reject.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/rule%20providers%20files/reject.yaml?token=GHSAT0AAAAAACVLDBG27IZQGXYUCRP45IWKZVD4RIA
     behavior: classical
     path: "./reject.yaml"
   Streaming:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/streaming.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/rule%20providers%20files/streaming.yaml?token=GHSAT0AAAAAACVLDBG3ODMBCH3ZEJGDSZBSZVD4R4A
     behavior: classical
     path: "./streaming.yaml"
   Youtube:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/youtube.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/rule%20providers%20files/youtube.yaml?token=GHSAT0AAAAAACVLDBG2FJB6RMNKQUYVIUI2ZVD4SOA
     behavior: classical
     path: "./youtube.yaml"
   Umum:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/umum.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/rule%20providers%20files/umum.yaml?token=GHSAT0AAAAAACVLDBG2FV2MWGGF5VNNS7P4ZVD4S3Q
     behavior: classical
     path: "./umum.yaml"
 #
