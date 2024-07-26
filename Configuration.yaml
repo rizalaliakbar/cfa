@@ -1,0 +1,200 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+    - tcp://8.8.8.8:53
+    - tcp://8.8.4.4:53
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:7874
+  fake-ip-filter:
+  - "+.*"
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.adguard.com/dns-query
+    - https://dns.google/dns-query
+    - tls://dns.adguard.com
+    - tls://dns-google.com/
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+#
+proxy-providers:
+  Satu:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun1.yaml
+    path: "./akun1.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Dua:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun2.yaml
+    path: "./akun2.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Tiga:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/akun3.yaml
+    path: "./akun3.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+#
+  DSB1:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/dsb1.yaml
+    path: "./dsb1.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  DSB2:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Provider%20Files/dsb2.yaml
+    path: "./dsb2.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+#
+proxy-groups:
+  - name: CLASH
+    type: select
+    disable-udp: false
+    use:
+      - Satu
+      - Dua
+      - Tiga
+    proxies:
+      - AUTO
+      - FALLBACK
+      - BALANCED
+      - DIRECT
+      - REJECT
+#
+  - name: AUTO
+    type: url-test
+    disable-udp: false
+    use:
+      - Satu
+      - Dua
+      - Tiga
+    interval: 300
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
+#
+  - name: FALLBACK
+    type: fallback
+    disable-udp: false
+    use:
+      - Satu
+      - Dua
+      - Tiga
+    interval: 300
+    lazy: false
+    url: http://www.gstatic.com/generate_204
+#
+  - name: BALANCED
+    type: load-balance
+    strategy: consistent-hashing
+    disable-udp: false
+    use:
+      - Satu
+      - Dua
+      - Tiga
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+#
+  - name: DSB
+    type: load-balance
+    strategy: consistent-hashing
+    disable-udp: false
+    use:
+      - DSB1
+      - DSB2
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+#
+  - name: LANGSUNG
+    type: select
+    disable-udp: false
+    proxies:
+      - DIRECT
+      - CLASH
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+#
+  - name: TOLAK
+    type: select
+    disable-udp: false
+    proxies:
+      - REJECT
+      - CLASH
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+#
+rule-providers:
+  Direct:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/direct.yaml
+    behavior: classical
+    path: "./direct.yaml"
+  Reject:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/reject.yaml
+    behavior: classical
+    path: "./reject.yaml"
+  Streaming:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/streaming.yaml
+    behavior: classical
+    path: "./streaming.yaml"
+  Youtube:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/youtube.yaml
+    behavior: classical
+    path: "./youtube.yaml"
+  Umum:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/CFA/main/Rule%20Files/umum.yaml
+    behavior: classical
+    path: "./umum.yaml"
+#
+rules:
+  - RULE-SET,Direct,LANGSUNG
+  - RULE-SET,Reject,TOLAK
+  - RULE-SET,Streaming,DSB
+  - RULE-SET,Youtube,DSB
+  - RULE-SET,Umum,CLASH
+  - MATCH,CLASH
