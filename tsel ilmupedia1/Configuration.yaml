@@ -175,6 +175,11 @@ rule-providers:
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/reject.yaml
     behavior: classical
     path: "./reject.yaml"
+  Sosmed:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/sosmed.yaml
+    behavior: classical
+    path: "./sosmed.yaml"
   Streaming:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/rules/streaming.yaml
@@ -194,6 +199,7 @@ rule-providers:
 rules:
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
+  - RULE-SET,Sosmed,DSB
   - RULE-SET,Streaming,DSB
   - RULE-SET,Youtube,DSB
   - RULE-SET,Umum,CLASH
