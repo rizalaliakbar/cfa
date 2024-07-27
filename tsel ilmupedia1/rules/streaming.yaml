@@ -34,7 +34,6 @@ payload:
   - DOMAIN-SUFFIX,mobile-collector.newrelic.com
   - DOMAIN-SUFFIX,uplynk.com
   - DOMAIN-SUFFIX,id.spankbang.com
-  - DOMAIN-SUFFIX,spankbang.com
   # > AbemaTV
   # - USER-AGENT,AbemaTV*
   - PROCESS-NAME,tv.abema
