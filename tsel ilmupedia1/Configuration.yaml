@@ -25,6 +25,7 @@ dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
   listen: 127.0.0.1:7874
   fake-ip-filter:
   - "+.*"
@@ -197,6 +198,7 @@ rule-providers:
     path: "./umum.yaml"
 #
 rules:
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
   - RULE-SET,Sosmed,DSB
