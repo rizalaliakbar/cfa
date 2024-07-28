@@ -72,18 +72,18 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 #
-  Dsb1:
+  Empat:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb1.yaml
-    path: "./dsb1.yaml"
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun4.yaml
+    path: "./akun4.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  Dsb2:
+  Lima:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb2.yaml
-    path: "./dsb2.yaml"
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun5.yaml
+    path: "./akun5.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -137,13 +137,13 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: DSB
+  - name: STR
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - Dsb1
-      - Dsb2
+      - akun4
+      - akun5
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -201,8 +201,8 @@ rules:
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
-  - RULE-SET,Sosmed,DSB
-  - RULE-SET,Streaming,DSB
-  - RULE-SET,Youtube,DSB
+  - RULE-SET,Sosmed,STR
+  - RULE-SET,Streaming,STR
+  - RULE-SET,Youtube,STR
   - RULE-SET,Umum,CLASH
   - MATCH,CLASH
