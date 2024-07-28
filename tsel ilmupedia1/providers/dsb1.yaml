@@ -10,7 +10,7 @@ proxies:
     servername: cfed.tgzdyz2.top
     network: ws
     ws-opts:
-      path: tg@zdyz2
+      path: /tg@zdyz2
       headers:
         Host: cfed.tgzdyz2.top
     udp: true
