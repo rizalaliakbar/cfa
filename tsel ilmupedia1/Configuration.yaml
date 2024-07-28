@@ -142,8 +142,8 @@ proxy-groups:
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - akun4
-      - akun5
+      - Empat
+      - Lima
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
