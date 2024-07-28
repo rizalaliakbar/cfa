@@ -1,0 +1,16 @@
+proxies:
+  - name: Empat
+    server: 104.26.7.171
+    port: 443
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cfed.tgzdyz2.top
+    network: ws
+    ws-opts:
+      path: /tg@zdyz2
+      headers:
+        Host: cfed.tgzdyz2.top
+    udp: true
