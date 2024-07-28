@@ -97,6 +97,8 @@ proxy-groups:
       - Satu
       - Dua
       - Tiga
+      - Empat
+      - Lima
     proxies:
       - AUTO
       - FALLBACK
