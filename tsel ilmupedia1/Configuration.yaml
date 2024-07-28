@@ -72,7 +72,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 #
-  DSB1:
+  Dsb1:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb1.yaml
     path: "./dsb1.yaml"
@@ -80,7 +80,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  DSB2:
+  Dsb2:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/dsb2.yaml
     path: "./dsb2.yaml"
@@ -142,8 +142,8 @@ proxy-groups:
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - DSB1
-      - DSB2
+      - Dsb1
+      - Dsb2
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
