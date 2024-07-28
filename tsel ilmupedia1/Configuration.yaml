@@ -47,7 +47,7 @@ dns:
     - 112.215.203.254
 #
 proxy-providers:
-  Satu:
+  PSatu:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun1.yaml
     path: "./akun1.yaml"
@@ -55,7 +55,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  Dua:
+  PDua:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun2.yaml
     path: "./akun2.yaml"
@@ -63,7 +63,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  Tiga:
+  PTiga:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun3.yaml
     path: "./akun3.yaml"
@@ -72,7 +72,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 #
-  Empat:
+  PEmpat:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun4.yaml
     path: "./akun4.yaml"
@@ -80,7 +80,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  Lima:
+  PLima:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun5.yaml
     path: "./akun5.yaml"
@@ -94,11 +94,11 @@ proxy-groups:
     type: select
     disable-udp: false
     use:
-      - Satu
-      - Dua
-      - Tiga
-      - Empat
-      - Lima
+      - PSatu
+      - PDua
+      - PTiga
+      - PEmpat
+      - PLima
     proxies:
       - AUTO
       - FALLBACK
@@ -110,9 +110,9 @@ proxy-groups:
     type: url-test
     disable-udp: false
     use:
-      - Satu
-      - Dua
-      - Tiga
+      - PSatu
+      - PDua
+      - PTiga
     interval: 300
     tolerance: 50
     url: http://www.gstatic.com/generate_204
@@ -121,9 +121,9 @@ proxy-groups:
     type: fallback
     disable-udp: false
     use:
-      - Satu
-      - Dua
-      - Tiga
+      - PSatu
+      - PDua
+      - PTiga
     interval: 300
     lazy: false
     url: http://www.gstatic.com/generate_204
@@ -133,9 +133,9 @@ proxy-groups:
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - Satu
-      - Dua
-      - Tiga
+      - PSatu
+      - PDua
+      - PTiga
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -144,8 +144,8 @@ proxy-groups:
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - Empat
-      - Lima
+      - PEmpat
+      - PLima
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
