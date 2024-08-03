@@ -88,14 +88,14 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  PEnam:
-    type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun6.yaml
-    path: "./akun6.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+#  PEnam:
+#    type: http
+#    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/providers/akun6.yaml
+#    path: "./akun6.yaml"
+#    health-check:
+#      enable: true
+#      url: http://www.gstatic.com/generate_204
+#      interval: 300
 #
 proxy-groups:
   - name: CLASH
@@ -107,7 +107,7 @@ proxy-groups:
       - PTiga
       - PEmpat
       - PLima
-      - PEnam
+#      - PEnam
     proxies:
       - AUTO
       - FALLBACK
@@ -124,7 +124,7 @@ proxy-groups:
       - PTiga
       - PEmpat
       - PLima
-      - PEnam
+#      - PEnam
     interval: 300
     tolerance: 50
     url: http://www.gstatic.com/generate_204
@@ -136,6 +136,9 @@ proxy-groups:
       - PSatu
       - PDua
       - PTiga
+      - PEmpat
+      - PLima
+#      - PEnam
     interval: 300
     lazy: false
     url: http://www.gstatic.com/generate_204
@@ -156,7 +159,8 @@ proxy-groups:
     strategy: consistent-hashing
     disable-udp: false
     use:
-      - PLima
+      - PSatu
+      - PDua
       - PEnam
     interval: 300
     url: http://www.gstatic.com/generate_204
