@@ -150,6 +150,8 @@ proxy-groups:
     use:
       - PSatu
       - PDua
+      - PTiga
+      - PEmpat
       - PLima
       - PEnam
     interval: 300
