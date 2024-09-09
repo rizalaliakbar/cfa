@@ -1,6 +1,6 @@
 proxies:
   - name: Enam
-    server: 104.26.7.171
+    server: xlcare.sociomile.com
     port: 443
     type: trojan
     password: b4e8771997c94732acbc9ec4d19c2589
