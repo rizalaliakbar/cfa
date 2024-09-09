@@ -1,6 +1,6 @@
 proxies:
   - name: Lima
-    server: 104.26.7.171
+    server: chat.sociomile.com
     port: 443
     type: vless
     uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
