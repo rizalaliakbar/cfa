@@ -223,7 +223,7 @@ rules:
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
   - RULE-SET,Sosmed,STR
-  - RULE-SET,Streaming,STR
-  - RULE-SET,Youtube,STR
+  - RULE-SET,Streaming,BALANCED
+  - RULE-SET,Youtube,BALANCED
   - RULE-SET,Umum,CLASH
   - MATCH,CLASH
