@@ -1,0 +1,12 @@
+proxies:
+  - name: simple
+    server: dtc.lunatech.my.id
+    port: 443
+    type: trojan
+    password: 70da7966-5685-4227-a423-5db5719a56e3
+    skip-cert-verify: true
+    sni: dtc.lunatech.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: trojan
+    udp: true
