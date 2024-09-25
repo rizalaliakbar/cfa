@@ -1,5 +1,5 @@
 proxies:
-  - name: AkunSatu
+  - name: AkunDua
     server: 104.18.25.139
     port: 443
     type: vless
