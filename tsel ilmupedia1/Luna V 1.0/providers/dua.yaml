@@ -1,6 +1,6 @@
 proxies:
   - name: AkunSatu
-    server: 104.26.7.171
+    server: 104.18.25.139
     port: 443
     type: vless
     uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
