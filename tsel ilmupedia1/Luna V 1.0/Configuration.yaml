@@ -131,10 +131,6 @@ proxy-groups:
     use:
       - PSatu
       - PDua
-      - PTiga
-      - PEmpat
-      - PLima
-      - PEnam
     interval: '300'
     tolerance: '50'
     url: http://www.gstatic.com/generate_204
