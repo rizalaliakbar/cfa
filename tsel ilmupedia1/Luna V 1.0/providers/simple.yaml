@@ -6,7 +6,9 @@ proxies:
     password: 70da7966-5685-4227-a423-5db5719a56e3
     skip-cert-verify: true
     sni: dtc.lunatech.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: trojan
+    network: ws
+    ws-opts:
+      path: /wss
+      headers:
+        Host: dtc.lunatech.my.id
     udp: true
