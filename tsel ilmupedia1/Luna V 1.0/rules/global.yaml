@@ -30,11 +30,8 @@ payload:
   - DOMAIN-SUFFIX,connectivitycheck.android.com
   - DOMAIN-SUFFIX,inbox.google.com
   - DOMAIN-SUFFIX,safebrowsing.googleapis.com
-
     # > Umum
   - DST-PORT,5228
-
-  
     # > Zerotier
   - DOMAIN,my.zerotier.com
   - DOMAIN-SUFFIX,zerotier.com
@@ -46,25 +43,20 @@ payload:
   - DST-PORT,29994
   - DST-PORT,40775
   - DST-PORT,43215
-  
   # > BING
   - DOMAIN-SUFFIX,4.bing.com
   - DOMAIN-SUFFIX,www.bing.com
-
   # > MICROSOFT
   - DOMAIN-SUFFIX,smartscreen-prod.microsoft.com
   - DOMAIN-SUFFIX,self.events.data.microsoft.com
   - DOMAIN-SUFFIX,nav.smartscreen.microsoft.com
   - DOMAIN-SUFFIX,edge.microsoft.com
-
   # > DISQUS
   - DOMAIN-SUFFIX,myip.disqus.com
   - DOMAIN-SUFFIX,disqus.com
   - DOMAIN-SUFFIX,c.disquscdn.com
-
   # > MEDIAFIRE
   - DOMAIN-SUFFIX,app.mediafire.com
-
   # > GOOGLE MEET
   - DOMAIN-SUFFIX,meetings.googleapis.com
   # > GOOGLE CLASSROOM
@@ -76,7 +68,6 @@ payload:
   - DOMAIN-SUFFIX,pin-river.data.ea.com
   - DOMAIN-SUFFIX,accounts.ea.com
   - DOMAIN-SUFFIX,sg-link.byteoversea.com
-
   # > BLUESTACK
   - DOMAIN-SUFFIX,cloud.bluestacks.com
   - DOMAIN-SUFFIX,cdn3.bluestacks.com
