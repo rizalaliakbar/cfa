@@ -139,6 +139,7 @@ proxy-groups:
     disable-udp: false
     use:
       - PSatu
+      - PDua
     interval: 100
     lazy: false
     url: http://www.gstatic.com/generate_204
