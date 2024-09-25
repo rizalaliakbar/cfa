@@ -12,8 +12,8 @@ tcp-concurrent: true
 enable-process: true
 secret: ""
 external-controller: 0.0.0.0:9090
-bind-address: 0.0.0.0
-external-ui: ui
+bind-address: "*"
+#external-ui: ui
 find-process-mode: always
 #
 tun:
@@ -147,21 +147,26 @@ rule-providers:
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/global.yaml
     behavior: classical
     path: "./global.yaml"
-  Gamee:
+  Game1:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/game.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/game1.yaml
+    behavior: classical
+    path: "./game1.yaml"
+  Game2:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/game2.yaml
     behavior: domain
-    path: "./game.yaml"
+    path: "./game2.yaml"
   UDP:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/PortUDP.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/portudp.yaml
     behavior: classical
-    path: "./PortUDP.yaml"
+    path: "./portudp.yaml"
   TCP:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/PortTCP.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/porttcp.yaml
     behavior: classical
-    path: "./PortTCP.yaml"
+    path: "./porttcp.yaml"
   Speedtest:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/speedtest.yaml
@@ -191,8 +196,8 @@ rules:
   #- RULE-SET,Ads,💢Ads&18+🔞
   #- RULE-SET,Addon,☣️Add-On☢️
   - RULE-SET,Speedtest,🌐 Internet
-  - RULE-SET,Game,🌐 Internet
-  - RULE-SET,Gamee,🌐 Internet
+  - RULE-SET,Game1,🌐 Internet
+  - RULE-SET,Game2,🌐 Internet
   - RULE-SET,UDP,🌐 Internet
   - RULE-SET,TCP,🌐 Internet
   - RULE-SET,Global,🌐 Internet
