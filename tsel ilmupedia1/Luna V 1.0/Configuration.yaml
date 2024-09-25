@@ -127,12 +127,12 @@ proxy-providers:
 proxy-groups:
   - name: 🌐 Internet
     type: load-balance
-    strategy: consistent-hashing
+    strategy: round-robin
     disable-udp: false
     use:
       - PSatu
       - PDua
-    interval: 150
+    interval: '30'
     url: http://www.gstatic.com/generate_204
   - name: FALLBACK
     type: fallback
@@ -140,7 +140,7 @@ proxy-groups:
     use:
       - PSatu
       - PDua
-    interval: 100
+    interval: '30'
     lazy: false
     url: http://www.gstatic.com/generate_204
 #
