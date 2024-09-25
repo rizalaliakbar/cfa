@@ -126,13 +126,13 @@ proxy-providers:
 #
 proxy-groups:
   - name: 🌐 Internet
-    type: url-test
+    type: load-balance
+    strategy: round-robin
     disable-udp: false
     use:
       - PSatu
       - PDua
-    interval: '300'
-    tolerance: '50'
+    interval: '30'
     url: http://www.gstatic.com/generate_204
   - name: FALLBACK
     type: fallback
