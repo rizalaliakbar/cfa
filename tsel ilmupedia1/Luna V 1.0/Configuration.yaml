@@ -15,7 +15,7 @@ external-controller: 0.0.0.0:9090
 bind-address: 0.0.0.0
 external-ui: ui
 find-process-mode: always
-
+#
 tun:
   enable: true
   prefer-h3: true
@@ -27,8 +27,7 @@ tun:
   dns-hijack:
      - any:53
      - tcp://any:53
-  
-  
+#
 dns:
   enable: true
   ipv6: false
@@ -90,7 +89,6 @@ dns:
     - 'GC._msDCS.*.*'
     - 'DC._msDCS.*.*'
     - 'PDC._msDCS.*.*'
-  
   nameserver:
     #- 8.8.8.8
     #- 8.8.4.4
@@ -101,15 +99,13 @@ dns:
     - https://dns.google/dns-query
     - tls://dns.adguard.com
     - tls://dns-google.com/
-    
   default-nameserver:
     #- 8.8.8.8
     - '1.1.1.1'
     - '9.9.9.9'
     - '112.215.203.254'
     - '149.112.112.112'
-    
-
+#
 proxy-providers:
   PSatu:
     type: http
@@ -119,7 +115,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 100
-      
+#
 proxy-groups:
   - name: 🌐 Internet
     type: select
@@ -171,7 +167,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/rules/speedtest.yaml
     behavior: classical
     path: "./speedtest.yaml"
-    
+#
 rules:
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
