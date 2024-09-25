@@ -126,13 +126,17 @@ proxy-providers:
 #
 proxy-groups:
   - name: 🌐 Internet
-    type: load-balance
-    strategy: round-robin
+    type: url-test
     disable-udp: false
     use:
       - PSatu
       - PDua
-    interval: '30'
+      - PTiga
+      - PEmpat
+      - PLima
+      - PEnam
+    interval: '300'
+    tolerance: '50'
     url: http://www.gstatic.com/generate_204
   - name: FALLBACK
     type: fallback
