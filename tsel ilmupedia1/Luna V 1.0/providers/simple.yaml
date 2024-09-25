@@ -1,14 +1,16 @@
 proxies:
   - name: simple
-    server: xlcare.sociomile.com
+    server: 104.26.7.171
     port: 443
-    type: trojan
-    password: 70da7966-5685-4227-a423-5db5719a56e3
+    type: vless
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: dtc.lunatech.my.id
+    servername: cfed.tgzdyz2.top
     network: ws
     ws-opts:
-      path: /wss
+      path: /wss/tg@zdyz2
       headers:
-        Host: dtc.lunatech.my.id
+        Host: cfed.tgzdyz2.top
     udp: true
