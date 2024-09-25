@@ -109,8 +109,16 @@ dns:
 proxy-providers:
   PSatu:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/providers/simple.yaml
-    path: "./simple.yaml"
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/providers/satu.yaml
+    path: "./satu.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 100
+  PDua:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Luna%20V%201.0/providers/dua.yaml
+    path: "./dua.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -118,10 +126,14 @@ proxy-providers:
 #
 proxy-groups:
   - name: 🌐 Internet
-    type: select
+    type: load-balance
+    strategy: consistent-hashing
     disable-udp: false
     use:
       - PSatu
+      - PDua
+    interval: 150
+    url: http://www.gstatic.com/generate_204
   - name: FALLBACK
     type: fallback
     disable-udp: false
