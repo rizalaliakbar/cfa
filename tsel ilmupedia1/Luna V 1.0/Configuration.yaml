@@ -22,7 +22,7 @@ tun:
   auto-redir: true
   auto-route: true
   #auto-detect-interface: true
-  #listen: 0.0.0.0:53
+  listen: 0.0.0.0:53
   stack: gvisor
   dns-hijack:
      - any:53
@@ -32,7 +32,7 @@ dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
-  listen: 127.0.0.1:7874
+  #listen: 127.0.0.1:7874
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - "+.*"
