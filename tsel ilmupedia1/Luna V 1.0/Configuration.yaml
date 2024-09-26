@@ -127,12 +127,46 @@ proxy-providers:
 proxy-groups:
   - name: 🌐 Internet
     type: load-balance
-    strategy: round-robin
+    #strategy: round-robin
+    strategy: consistent-hashing
     disable-udp: false
     use:
       - PSatu
       - PDua
-    interval: '10'
+      - PTiga
+      - PEmpat
+    proxies:
+      - 📡 AUTO
+      - Url-Test-Satu
+      - Url-Test-Dua
+    interval: '100'
+    url: http://www.gstatic.com/generate_204
+  - name: 📡 AUTO
+    type: url-test
+    disable-udp: false
+    proxies:
+      - Url-Test-Satu
+      - Url-Test-Dua
+    interval: '100'
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
+  - name: Url-Test-Satu
+    type: url-test
+    disable-udp: false
+    use:
+      - PSatu
+      - PDua
+    interval: '100'
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204
+  - name: Url-Test-Dua
+    type: url-test
+    disable-udp: false
+    use:
+      - PTiga
+      - PEmpat
+    interval: '100'
+    tolerance: 50
     url: http://www.gstatic.com/generate_204
   - name: FALLBACK
     type: fallback
@@ -140,6 +174,8 @@ proxy-groups:
     use:
       - PSatu
       - PDua
+      - PTiga
+      - PEmpat
     interval: '10'
     lazy: false
     url: http://www.gstatic.com/generate_204
