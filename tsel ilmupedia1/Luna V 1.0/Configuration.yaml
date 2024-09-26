@@ -151,8 +151,8 @@ proxy-groups:
       - REJECT
   - name: 📡 AUTO
     type: load-balance
-    #strategy: round-robin
-    strategy: consistent-hashing
+    strategy: round-robin
+    #strategy: consistent-hashing
     disable-udp: false
     proxies:
       - Url-Test-Satu
