@@ -29,9 +29,36 @@ payload:
   - DOMAIN-SUFFIX,mobilelegends.net
   - DOMAIN-SUFFIX,mobilelegends.org
   - DOMAIN-SUFFIX,mobilelegends.com.cn
+  - DOMAIN-SUFFIX,mobile.legends
+  - DOMAIN-SUFFIX,mobile-legends.net
   - DOMAIN-SUFFIX,youngjoygame.com
   - DOMAIN-SUFFIX,yuanzhanapp.com
   - DOMAIN-SUFFIX,aihelp.net
+  - DOMAIN-SUFFIX,sl-reverse.com
+  - DOMAIN-SUFFIX,adjust.net.in
+  - DOMAIN-SUFFIX,akamaitechnologies.com
   - DOMAIN,tnc16-alisg.isnssdk.com
   - DOMAIN,gplog-sg.byteoversea.com
   - DOMAIN,xlog.byteoversea.com
+  - IP-CIDR,119.81.9.0/18
+  - IP-CIDR,169.46.132.0/16
+  - IP-CIDR,128.1.87.0/16
+  - IP-CIDR,23.59.168.0/16
+  - IP-CIDR,4.59.37.0/16
+  - IP-CIDR,169.57.173.0/16
+  - IP-CIDR,161.202.217.0/18
+  - IP-CIDR,129.227.33.1/16
+  - IP-CIDR,163.181.18.0/18
+  - IP-CIDR,58.27.5.0/16
+  - IP-CIDR,119.81.9.0/16
+  - IP-CIDR,161.202.213.0/16
+  - IP-CIDR,169.46.132.0/16
+  - IP-CIDR,23.248.1.1/16
+  #newml
+  - IP-CIDR,161.202.0.0/16
+  - IP-CIDR,119.28.0.0/16
+  - IP-CIDR,169.48.192.0/18
+  - IP-CIDR,37.48.64.0/18
+  - IP-CIDR,169.56.64.0/18
+  - IP-CIDR,169.44.0.0/17
+  - IP-CIDR,124.202.128.0/16
