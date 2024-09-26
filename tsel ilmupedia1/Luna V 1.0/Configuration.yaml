@@ -146,11 +146,6 @@ proxy-groups:
     #strategy: round-robin
     strategy: consistent-hashing
     disable-udp: false
-    #use:
-    #  - PSatu
-    #  - PDua
-    #  - PTiga
-    #  - PEmpat
     proxies:
       - 📡 AUTO
       - Url-Test-Satu
