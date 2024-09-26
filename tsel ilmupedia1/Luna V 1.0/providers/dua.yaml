@@ -3,14 +3,14 @@ proxies:
     server: 104.18.25.139
     port: 443
     type: vless
-    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+    uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: cfed.tgzdyz2.top
+    servername: id.masfen.my.id
     network: ws
     ws-opts:
-      path: /wss/tg@zdyz2
+      path: /?ed/u003d2048
       headers:
-        Host: cfed.tgzdyz2.top
+        Host: id.masfen.my.id
     udp: true
