@@ -1,16 +1,16 @@
 proxies:
-  - name: AkunSatu
+  - name: 🇸🇬 SG-1
     server: 104.26.7.171
     port: 443
     type: vless
-    uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
+    uuid: 77b3cbba-e6ac-405a-9481-976a0462eab9
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id.masfen.my.id
+    servername: EsetsecUrITylIceNSE.xksQU.worKErs.dEv
     network: ws
     ws-opts:
-      path: /?ed/u003d2048
+      path: /qzJMmPJ8AFR7gjhl?ed=2560
       headers:
-        Host: id.masfen.my.id
+        Host: EsetsecUrITylIceNSE.xksQU.worKErs.dEv
     udp: true
