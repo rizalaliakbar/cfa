@@ -1,16 +1,14 @@
 proxies:
-  - name: 🇸🇬 SG-3
-    server: 104.18.25.139
+  - name: Enam
+    server: xlcare.sociomile.com
     port: 443
-    type: vless
-    uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
-    cipher: auto
-    tls: true
+    type: trojan
+    password: b4e8771997c94732acbc9ec4d19c2589
     skip-cert-verify: true
-    servername: id.masfen.my.id
+    sni: jobscareerforstudent.com
     network: ws
     ws-opts:
-      path: /?ed/u003d2048
+      path: /6b777a91
       headers:
-        Host: id.masfen.my.id
+        Host: jobscareerforstudent.com
     udp: true
