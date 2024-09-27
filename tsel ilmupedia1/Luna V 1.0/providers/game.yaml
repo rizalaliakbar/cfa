@@ -1,16 +1,16 @@
 proxies:
   - name: 🇸🇬 SG-3
-    server: 104.18.25.139
+    server: 104.26.7.171
     port: 443
     type: vless
-    uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
+    uuid: 77b3cbba-e6ac-405a-9481-976a0462eab9
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: kk999.ylks.link
+    servername: EsetsecUrITylIceNSE.xksQU.worKErs.dEv
     network: ws
     ws-opts:
-      path: /wss/blue
+      path: /qzJMmPJ8AFR7gjhl?ed=2560
       headers:
-        Host: kk999.ylks.link
+        Host: EsetsecUrITylIceNSE.xksQU.worKErs.dEv
     udp: true
