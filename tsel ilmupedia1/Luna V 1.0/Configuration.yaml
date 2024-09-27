@@ -25,8 +25,8 @@ tun:
   listen: 0.0.0.0:53
   stack: gvisor
   dns-hijack:
-     - any:53
-     - tcp://any:53
+     - "any:53"
+     - "tcp://any:53"
 #
 dns:
   enable: true
@@ -177,6 +177,11 @@ proxy-groups:
     interval: '100'
     tolerance: 50
     url: http://www.gstatic.com/generate_204
+  - name: 🎮 Gaming
+    type: select
+    disable-udp: false
+    use:
+      - PSatu
   - name: FALLBACK
     type: fallback
     disable-udp: false
@@ -254,9 +259,9 @@ rules:
   #- RULE-SET,Ads,💢Ads&18+🔞
   #- RULE-SET,Addon,☣️Add-On☢️
   - RULE-SET,Speedtest,🌐 Internet
-  - RULE-SET,Game1,🌐 Internet
-  - RULE-SET,Game2,🌐 Internet
-  - RULE-SET,UDP,🌐 Internet
-  - RULE-SET,TCP,🌐 Internet
+  - RULE-SET,Game1,🎮 Gaming
+  - RULE-SET,Game2,🎮 Gaming
+  - RULE-SET,UDP,🎮 Gaming
+  - RULE-SET,TCP,🎮 Gaming
   - RULE-SET,Global,🌐 Internet
   - MATCH,🌐 Internet
