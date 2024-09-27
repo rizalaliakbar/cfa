@@ -196,7 +196,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - REJECT
-    interval: '10'
+    interval: '100'
     lazy: false
     url: http://www.gstatic.com/generate_204
 #
