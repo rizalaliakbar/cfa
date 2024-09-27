@@ -1,5 +1,5 @@
 proxies:
-  - name: AkunDua
+  - name: 🇸🇬 SG-2
     server: 104.18.25.139
     port: 443
     type: vless
