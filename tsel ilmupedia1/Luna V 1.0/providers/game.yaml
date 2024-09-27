@@ -3,14 +3,14 @@ proxies:
     server: 104.18.25.139
     port: 443
     type: vless
-    uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
+    uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id.masfen.my.id
+    servername: kk999.ylks.link
     network: ws
     ws-opts:
-      path: /?ed/u003d2048
+      path: /wss/blue
       headers:
-        Host: id.masfen.my.id
+        Host: kk999.ylks.link
     udp: true
