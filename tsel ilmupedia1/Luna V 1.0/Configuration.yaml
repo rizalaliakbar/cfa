@@ -198,6 +198,7 @@ proxy-groups:
       - PDua
       - PTiga
       - PEmpat
+      - PGame
     interval: '10'
     lazy: false
     url: http://www.gstatic.com/generate_204
