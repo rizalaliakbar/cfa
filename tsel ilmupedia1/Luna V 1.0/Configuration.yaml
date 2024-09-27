@@ -194,11 +194,6 @@ proxy-groups:
     type: fallback
     disable-udp: false
     proxies:
-      - PSatu
-      - PDua
-      - PTiga
-      - PEmpat
-      - PGame
       - DIRECT
       - REJECT
     interval: '10'
