@@ -21,6 +21,7 @@ tun:
     - tcp://8.8.4.4:53
 profile:
   store-selected: true
+global-client-fingerprint: chrome
 dns:
   enable: true
   ipv6: false
@@ -38,16 +39,23 @@ dns:
     #- https://dns.google/dns-query
     - tls://dns.adguard.com
     - tls://dns-google.com/
-  fallback:
-    - 1.1.1.1
-    - 1.0.0.1
-    #- 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
   default-nameserver:
     #- 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
+  fallback:
+    - 1.1.1.1
+    - 1.0.0.1
+    #- 8.8.4.4
+    - https://1.0.0.1/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - tls://1.1.1.1
+    - 112.215.203.254
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 240.0.0.0/4
 proxy-providers:
   PSatu:
     type: http
@@ -118,13 +126,13 @@ proxy-groups:
       - PEnam
       - PGame
     proxies:
-      - AUTO
+      - ♻️_AUTO
       - FALLBACK
-      - BALANCED
+      - 🔠_BALANCED
       - DIRECT
       - REJECT
 #
-  - name: AUTO
+  - name: ♻️_AUTO
     type: url-test
     disable-udp: false
     use:
@@ -152,7 +160,7 @@ proxy-groups:
     lazy: false
     url: http://www.gstatic.com/generate_204
 #
-  - name: BALANCED
+  - name: 🔠_BALANCED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -256,6 +264,7 @@ rule-providers:
     path: "./global.yaml"
 #
 rules:
+  - GEOIP,IR,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,LANGSUNG
   - IP-CIDR,100.64.0.0/10,LANGSUNG
@@ -271,8 +280,8 @@ rules:
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
   - RULE-SET,Sosmed,SOSMED
-  - RULE-SET,Streaming,BALANCED
-  - RULE-SET,Youtube,BALANCED
+  - RULE-SET,Streaming,🔠_BALANCED
+  - RULE-SET,Youtube,🔠_BALANCED
   - RULE-SET,GameClassical,🎮_Gaming
   - RULE-SET,GameDomain,🎮_Gaming
   - RULE-SET,GameUdp,🎮_Gaming
