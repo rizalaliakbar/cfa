@@ -145,7 +145,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     url: http://www.gstatic.com/generate_204
-#
   - name: 🔁FALLBACK
     type: fallback
     disable-udp: false
