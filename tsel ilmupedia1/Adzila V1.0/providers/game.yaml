@@ -15,4 +15,3 @@ proxies:
       headers:
         Host: sg.mytendo.store
     udp: true
-#
