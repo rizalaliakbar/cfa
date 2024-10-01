@@ -129,6 +129,8 @@ proxy-groups:
       - ♻️AUTO
       - 🔁FALLBACK
       - ⚖️BALANCED
+      - 💬SOSMED
+      - 🎮Gaming
       - DIRECT
       - REJECT
 #
