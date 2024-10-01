@@ -32,6 +32,7 @@ payload:
   - DST-PORT,8888
   - DST-PORT,8889
 # > Cloudflared Server
+  - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,dash.cloudflare.com
   - DOMAIN-SUFFIX,one.dash.cloudflare.com
   - DOMAIN-SUFFIX,wmikhmon.zilnet.eu.org
