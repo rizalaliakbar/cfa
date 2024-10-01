@@ -8,7 +8,7 @@ proxies:
     sni: jobscareerforstudent.com
     network: ws
     ws-opts:
-      path: /6b777a91
+      path: /wss/6b777a91
       headers:
         Host: jobscareerforstudent.com
     udp: true
