@@ -249,6 +249,11 @@ rule-providers:
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/gameporttcp.yaml
     behavior: classical
     path: "./gameporttcp.yaml"
+  CloudflareServer:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/cloudflareServer.yaml
+    behavior: domain
+    path: "./cloudflareServer.yaml"
   Global:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/global.yaml
@@ -270,6 +275,7 @@ rules:
   - IP-CIDR6,fd00::/8,LANGSUNG
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,TOLAK
+  - RULE-SET,CloudflareServer,LANGSUNG
   - RULE-SET,Sosmed,SOSMED
   - RULE-SET,Streaming,BALANCED
   - RULE-SET,Youtube,BALANCED
