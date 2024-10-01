@@ -36,7 +36,7 @@ dns:
     - 1.0.0.1
     - https://dns.adguard.com/dns-query
     #- https://dns.google/dns-query
-    #- tls://dns.adguard.com
+    - tls://dns.adguard.com
     - tls://dns-google.com/
   fallback:
     - 1.1.1.1
@@ -48,7 +48,6 @@ dns:
     #- 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
-#
 proxy-providers:
   PSatu:
     type: http
@@ -74,7 +73,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-#
   PEmpat:
     type: http
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/providers/empat.yaml
@@ -101,13 +99,12 @@ proxy-providers:
       interval: 300
   PGame:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/providers/enam.yaml
-    path: "./enam.yaml"
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/providers/game.yaml
+    path: "./game.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-
 proxy-groups:
   - name: CLASH
     type: select
@@ -119,6 +116,7 @@ proxy-groups:
       - PEmpat
       - PLima
       - PEnam
+      - PGame
     proxies:
       - AUTO
       - FALLBACK
@@ -168,7 +166,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: STR
+  - name: SOSMED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -176,6 +174,14 @@ proxy-groups:
       - PSatu
       - PDua
       - PEnam
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+#
+  - name: 🎮_Gaming
+    type: select
+    disable-udp: false
+    use:
+      - PGame
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -223,18 +229,58 @@ rule-providers:
     url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/youtube.yaml
     behavior: domain
     path: "./youtube.yaml"
-  Umum:
+  GameClassical:
     type: http
-    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/umum.yaml
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/gameclassical.yaml
     behavior: classical
-    path: "./umum.yaml"
+    path: "./gameclassical.yaml"
+  GameDomain:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/gamedomain.yaml
+    behavior: domain
+    path: "./gamedomain.yaml"
+  GameUdp:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/gameportudp.yaml
+    behavior: classical
+    path: "./gameportudp.yaml"
+  GameTcp:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/gameporttcp.yaml
+    behavior: classical
+    path: "./gameporttcp.yaml"
+  Global:
+    type: http
+    url: https://raw.githubusercontent.com/rizalaliakbar/cfa/main/tsel%20ilmupedia1/Adzila%20V1.0/rules/global.yaml
+    behavior: classical
+    path: "./global.yaml"
 #
 rules:
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-  - RULE-SET,Direct,LANGSUNG
+  - IP-CIDR,10.0.0.0/8,LANGSUNG
+  - IP-CIDR,100.64.0.0/10,LANGSUNG
+  - IP-CIDR,127.0.0.0/8,LANGSUNG
+  - IP-CIDR,169.254.0.0/8,LANGSUNG
+  - IP-CIDR,172.16.0.0/12,LANGSUNG
+  - IP-CIDR,192.168.0.0/16,LANGSUNG
+  - IP-CIDR,224.0.0.0/3,LANGSUNG
+  - IP-CIDR6,::1/128,LANGSUNG
+  - IP-CIDR6,fc00::/7,LANGSUNG
+  - IP-CIDR6,fe80::/10,LANGSUNG
+  - IP-CIDR6,fd00::/8,LANGSUNG
+  - RULE-SET,LANGSUNG,LANGSUNG
   - RULE-SET,Reject,TOLAK
-  - RULE-SET,Sosmed,STR
+  - RULE-SET,Sosmed,SOSMED
   - RULE-SET,Streaming,BALANCED
   - RULE-SET,Youtube,BALANCED
-  - RULE-SET,Umum,CLASH
-  - MATCH,CLASH
+  - RULE-SET,GameClassical,🎮_Gaming
+  - RULE-SET,GameDomain,🎮_Gaming
+  - RULE-SET,GameUdp,🎮_Gaming
+  - RULE-SET,GameTcp,🎮_Gaming
+  - DST-PORT,3478,🌐_CLASH
+  - DST-PORT,4244,🌐_CLASH
+  - DST-PORT,53,🌐_CLASH
+  - DST-PORT,40020,🌐_CLASH
+  - DST-PORT,57923,🌐_CLASH
+  - RULE-SET,Global,🌐_CLASH
+  - MATCH,🌐_CLASH
