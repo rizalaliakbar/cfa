@@ -1,11 +1,11 @@
 payload:
   - DOMAIN-SUFFIX,
-  # Mulai baris ini kebawah bisa di edit/hapus
+# > Mulai baris ini kebawah bisa di edit/hapus
   - DOMAIN-SUFFIX,iq.com
-  # > Tencent Video
+# > Tencent Video
   - DOMAIN-SUFFIX,v.smtcdns.com
   - DOMAIN-SUFFIX,vv.video.qq.com
-  # > NIMO TV
+# > NIMO TV
   - DOMAIN-SUFFIX,ylog.nimo.tv
   - DOMAIN-SUFFIX,api.nimo.tv
   - DOMAIN-SUFFIX,metric.nimo.tv
@@ -23,7 +23,7 @@ payload:
   - DOMAIN-SUFFIX,follow-cf-dynamic.nimo.tv
   - DOMAIN-SUFFIX,statwup.nimo.tv
   - DOMAIN-KEYWORD,nimo.tv
-  # > Discovery Plus
+# > Discovery Plus
   - PROCESS-NAME,com.discovery.discoveryplus.mobile
   - DOMAIN-SUFFIX,content-ause1-ur-discovery1.uplynk.com
   - DOMAIN-SUFFIX,disco-api.com
@@ -33,7 +33,7 @@ payload:
   - DOMAIN-SUFFIX,litix.io
   - DOMAIN-SUFFIX,mobile-collector.newrelic.com
   - DOMAIN-SUFFIX,uplynk.com
-  # > AbemaTV
+# > AbemaTV
   # - USER-AGENT,AbemaTV*
   - PROCESS-NAME,tv.abema
   - DOMAIN-SUFFIX,abema.io
@@ -42,8 +42,7 @@ payload:
   - DOMAIN-SUFFIX,ameba.jp
   - DOMAIN-SUFFIX,hayabusa.io
   - DOMAIN-KEYWORD,abematv.akamaized.net
-
-  # > Apple API
+# > Apple API
   - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,apple.co
   - DOMAIN-SUFFIX,apple.com
@@ -66,19 +65,15 @@ payload:
   - IP-CIDR,192.35.50.0/24,no-resolve
   - IP-CIDR,198.183.17.0/24,no-resolve
   - IP-CIDR,205.180.175.0/24,no-resolve
-  
-  # > Apple News
+# > Apple News
   - DOMAIN-SUFFIX,apple.news
-  
-  # > Apple Maps
+# > Apple Maps
   - PROCESS-NAME,com.apple.geod
-  
-  # > Apple TV
+# > Apple TV
   - DOMAIN,np-edge.itunes.apple.com
   - DOMAIN,play-edge.itunes.apple.com
   - DOMAIN-SUFFIX,tv.apple.com
-  
-  # > BBC iPlayer
+# > BBC iPlayer
   - PROCESS-NAME,bbc.iplayer.android
   - DOMAIN-KEYWORD,bbcfmt
   - DOMAIN,aod-dash-uk-live.akamaized.net
@@ -92,25 +87,22 @@ payload:
   - DOMAIN-SUFFIX,bbci.co
   - DOMAIN-SUFFIX,bbci.co.uk
   - DOMAIN-SUFFIX,bidi.net.uk  
-  # > encoreTVB
+# > encoreTVB
   - PROCESS-NAME,com.tvbusa.encore
   - DOMAIN-SUFFIX,encoretvb.com
   - DOMAIN,content.jwplatform.com
   - DOMAIN,videos-f.jwpsrv.com
-  
-  # > Fox+ (HK|TW|SG)
+# > Fox+ (HK|TW|SG)
   # - USER-AGENT,FOXPlus*
   - DOMAIN-SUFFIX,akamaized.net
   - DOMAIN-SUFFIX,foxplus.com
   - DOMAIN-SUFFIX,theplatform.com
-  
-  # > Fox Now
+# > Fox Now
   # - USER-AGENT,FOX%20NOW*
   - DOMAIN-SUFFIX,fox.com
   - DOMAIN-SUFFIX,foxdcg.com
   - DOMAIN-SUFFIX,uplynk.com
-  
-  # > Hulu
+# > Hulu
   - PROCESS-NAME,com.hulu.plus
   - DOMAIN-SUFFIX,cws-hulu.conviva.com
   - DOMAIN-SUFFIX,hulu.com
@@ -119,16 +111,14 @@ payload:
   - DOMAIN-SUFFIX,huluad.com
   - DOMAIN-SUFFIX,huluim.com
   - DOMAIN-SUFFIX,hulustream.com
-  
-  # > Hulu(フールー)
+# > Hulu(フールー)
   - PROCESS-NAME,jp.happyon.android
   - DOMAIN-SUFFIX,happyon.jp
   - DOMAIN-SUFFIX,hulu.jp
   - DOMAIN-SUFFIX,prod.hjholdings.tv
   - DOMAIN-SUFFIX,streaks.jp
   - DOMAIN-SUFFIX,yb.uncn.jp
-  
-  # > Japonx
+# > Japonx
   - DOMAIN-KEYWORD,japonx
   - DOMAIN-KEYWORD,japronx
   - DOMAIN-SUFFIX,japonx.com
@@ -139,39 +129,32 @@ payload:
   - DOMAIN-SUFFIX,japronx.tv
   - DOMAIN-SUFFIX,japronx.net
   - DOMAIN-SUFFIX,japronx.vip
-
-  # > JOOX
+# > JOOX
   - PROCESS-NAME,com.tencent.ibg.joox
   - PROCESS-NAME,com.tencent.ibg.jooxtv
   - DOMAIN-SUFFIX,joox.com
   - DOMAIN-KEYWORD,jooxweb-api
-
-  # > KKBOX
+# > KKBOX
   - DOMAIN-SUFFIX,kkbox.com
   - DOMAIN-SUFFIX,kkbox.com.tw
   - DOMAIN-SUFFIX,kfs.io
-
-  # > KKTV
+# > KKTV
   - PROCESS-NAME,com.kktv.kktv
   - DOMAIN-SUFFIX,kktv.me
   - DOMAIN-SUFFIX,kktv.com.tw
   - DOMAIN,kktv-theater.kk.stream
-  
-  # > letv
+# > letv
   - DOMAIN-SUFFIX,api.mob.app.letv.com
-
-  # > Line TV
+# > Line TV
   # - USER-AGENT,LINE*
   - DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net
   - DOMAIN-SUFFIX,linetv.tw
   - DOMAIN-SUFFIX,profile.line-scdn.net
-  
-  # > myTV_SUPER
+# > myTV_SUPER
   # - USER-AGENT,mytv*
   - DOMAIN-SUFFIX,mytvsuper.com
   - DOMAIN-SUFFIX,tvb.com
-  
-  # > Netease Music
+# > Netease Music
   - DOMAIN-SUFFIX,163yun.com
   - DOMAIN-SUFFIX,api.iplay.163.com
   - DOMAIN-SUFFIX,hz.netease.com
@@ -196,15 +179,13 @@ payload:
   - IP-CIDR,59.111.181.35/32,no-resolve
   - IP-CIDR,59.111.181.38/32,no-resolve
   - IP-CIDR,59.111.181.60/32,no-resolve
-
-  # > 实际捕捉
+# > 实际捕捉
   - IP-CIDR,203.116.0.0/16,no-resolve
   - IP-CIDR,203.198.0.0/20,no-resolve
   - IP-CIDR,203.198.80.0/21,no-resolve
   - IP-CIDR,203.75.84.0/24,no-resolve
   - IP-CIDR,203.83.220.0/22,no-resolve
-  
-  # > 待定
+# > 待定
   - IP-CIDR,207.45.73.0/24,no-resolve
   - IP-CIDR,218.102.32.0/19,no-resolve
   - IP-CIDR,219.76.0.0/17,no-resolve
@@ -242,24 +223,17 @@ payload:
   - IP-CIDR,54.85.0.0/16,no-resolve
   - IP-CIDR,54.86.0.0/16,no-resolve
   - IP-CIDR,8.41.4.0/24,no-resolve
-
-  # > Pandora
+# > Pandora
   - PROCESS-NAME,com.pandora.android
   - DOMAIN-SUFFIX,pandora.com
-
-  # > SoundCloud
+# > SoundCloud
   # - USER-AGENT,SoundCloud*
   - DOMAIN-SUFFIX,sndcdn.com
   - DOMAIN-SUFFIX,soundcloud.com
-
-
-
-
   # Search Domain
   - DOMAIN-KEYWORD,joox
   - DOMAIN-KEYWORD,soundcloud
   - DOMAIN-KEYWORD,resso
-
 # > Anime
   - DOMAIN-SUFFIX,anoboy.watch
   - DOMAIN-SUFFIX,biliintl.com
