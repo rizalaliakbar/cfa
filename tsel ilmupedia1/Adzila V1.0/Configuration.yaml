@@ -21,7 +21,7 @@ tun:
     - tcp://8.8.4.4:53
 profile:
   store-selected: true
-global-client-fingerprint: chrome
+#global-client-fingerprint: chrome
 dns:
   enable: true
   ipv6: false
