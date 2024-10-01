@@ -1,6 +1,6 @@
 proxies:
   - name: 🇸🇬 SG-1
-    server: 104.26.7.171,104.18.25.139
+    server: 104.26.7.171
     port: 443
     type: vless
     uuid: fd2b8ac5-6ff3-44a1-8d39-77b3ba4bc32e
