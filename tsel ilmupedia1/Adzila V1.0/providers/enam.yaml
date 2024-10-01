@@ -1,6 +1,6 @@
 proxies:
   - name: 🇪🇽 NA-2
-    server: xlcare.sociomile.com #104.26.7.171 #104.18.25.139
+    server: 104.18.25.139
     port: 443
     type: trojan
     password: b4e8771997c94732acbc9ec4d19c2589
