@@ -173,7 +173,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: SOSMED
+  - name: 💬SOSMED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -278,7 +278,7 @@ rules:
   - IP-CIDR6,fd00::/8,LANGSUNG
   - RULE-SET,Direct,LANGSUNG
   - RULE-SET,Reject,🚫TOLAK
-  - RULE-SET,Sosmed,SOSMED
+  - RULE-SET,Sosmed,💬SOSMED
   - RULE-SET,Streaming,⚖️BALANCED
   - RULE-SET,Youtube,⚖️BALANCED
   - RULE-SET,GameClassical,🎮Gaming
