@@ -31,6 +31,8 @@ payload:
   - DST-PORT,8880
   - DST-PORT,8888
   - DST-PORT,8889
+# > Cloudflared Server
+  - DOMAIN-SUFFIX,wmikhmon.zilnet.eu.org
 # > GOOGLE
   - DOMAIN-SUFFIX,android.apis.google.com
   - DOMAIN-SUFFIX,update.googleapis.com
