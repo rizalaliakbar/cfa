@@ -14,3 +14,20 @@ proxies:
       headers:
         Host: EsetsecUrITylIceNSE.xksQU.worKErs.dEv
     udp: true
+##proxies:
+##  - name: tendo
+##    server: 104.26.7.171
+##    port: 443
+##    type: vmess
+##    uuid: Tendo-tendo
+##    alterId: 0
+##    cipher: auto
+##    tls: true
+##    skip-cert-verify: true
+##    servername: sg.mytendo.store
+##    network: ws
+##    ws-opts:
+##      path: /vmess
+##      headers:
+##        Host: sg.mytendo.store
+##    udp: true
