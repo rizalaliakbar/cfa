@@ -174,7 +174,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: 📱SOSMED
+  - name: SOSMED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -193,7 +193,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: ➡️LANGSUNG
+  - name: LANGSUNG
     type: select
     disable-udp: false
     proxies:
@@ -202,7 +202,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: 🚫TOLAK
+  - name: TOLAK
     type: select
     disable-udp: false
     proxies:
@@ -266,20 +266,20 @@ rule-providers:
 rules:
   - GEOIP,IR,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,➡️LANGSUNG
-  - IP-CIDR,100.64.0.0/10,➡️LANGSUNG
-  - IP-CIDR,127.0.0.0/8,➡️LANGSUNG
-  - IP-CIDR,169.254.0.0/8,➡️LANGSUNG
-  - IP-CIDR,172.16.0.0/12,➡️LANGSUNG
-  - IP-CIDR,192.168.0.0/16,➡️LANGSUNG
-  - IP-CIDR,224.0.0.0/3,➡️LANGSUNG
-  - IP-CIDR6,::1/128,➡️LANGSUNG
-  - IP-CIDR6,fc00::/7,➡️LANGSUNG
-  - IP-CIDR6,fe80::/10,➡️LANGSUNG
-  - IP-CIDR6,fd00::/8,➡️LANGSUNG
-  - RULE-SET,Direct,➡️LANGSUNG
-  - RULE-SET,Reject,🚫TOLAK
-  - RULE-SET,Sosmed,📱SOSMED
+  - IP-CIDR,10.0.0.0/8,LANGSUNG
+  - IP-CIDR,100.64.0.0/10,LANGSUNG
+  - IP-CIDR,127.0.0.0/8,LANGSUNG
+  - IP-CIDR,169.254.0.0/8,LANGSUNG
+  - IP-CIDR,172.16.0.0/12,LANGSUNG
+  - IP-CIDR,192.168.0.0/16,LANGSUNG
+  - IP-CIDR,224.0.0.0/3,LANGSUNG
+  - IP-CIDR6,::1/128,LANGSUNG
+  - IP-CIDR6,fc00::/7,LANGSUNG
+  - IP-CIDR6,fe80::/10,LANGSUNG
+  - IP-CIDR6,fd00::/8,LANGSUNG
+  - RULE-SET,Direct,LANGSUNG
+  - RULE-SET,Reject,TOLAK
+  - RULE-SET,Sosmed,SOSMED
   - RULE-SET,Streaming,⚖️BALANCED
   - RULE-SET,Youtube,⚖️BALANCED
   - RULE-SET,GameClassical,🎮Gaming
