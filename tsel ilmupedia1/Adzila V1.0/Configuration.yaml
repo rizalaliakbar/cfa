@@ -198,7 +198,7 @@ proxy-groups:
     disable-udp: false
     proxies:
       - DIRECT
-      - 🌐CLASH
+      - 🌍CLASH
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -207,7 +207,7 @@ proxy-groups:
     disable-udp: false
     proxies:
       - REJECT
-      - 🌐CLASH
+      - 🌍CLASH
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -286,10 +286,10 @@ rules:
   - RULE-SET,GameDomain,🎮Gaming
   - RULE-SET,GameUdp,🎮Gaming
   - RULE-SET,GameTcp,🎮Gaming
-  - DST-PORT,3478,🌐CLASH
-  - DST-PORT,4244,🌐CLASH
-  - DST-PORT,53,🌐CLASH
-  - DST-PORT,40020,🌐CLASH
-  - DST-PORT,57923,🌐CLASH
-  - RULE-SET,Global,🌐CLASH
-  - MATCH,🌐CLASH
+  - DST-PORT,3478,🌍CLASH
+  - DST-PORT,4244,🌍CLASH
+  - DST-PORT,53,🌍CLASH
+  - DST-PORT,40020,🌍CLASH
+  - DST-PORT,57923,🌍CLASH
+  - RULE-SET,Global,🌍CLASH
+  - MATCH,🌍CLASH
