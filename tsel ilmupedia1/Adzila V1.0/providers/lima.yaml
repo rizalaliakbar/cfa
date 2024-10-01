@@ -1,5 +1,5 @@
 proxies:
-  - name: Lima
+  - name: 🇪🇽 NA-1
     server: chat.sociomile.com #104.26.7.171 #104.18.25.139
     port: 443
     type: vless
