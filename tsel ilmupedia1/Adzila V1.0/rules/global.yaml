@@ -41,6 +41,7 @@ payload:
   - DOMAIN-SUFFIX,ssh.zilnet.eu.org
   - DOMAIN-SUFFIX,isp.zilnet.eu.org
   - DST-PORT,8291
+  - DST-PORT,5678
 # > GOOGLE
   - DOMAIN-SUFFIX,android.apis.google.com
   - DOMAIN-SUFFIX,update.googleapis.com
