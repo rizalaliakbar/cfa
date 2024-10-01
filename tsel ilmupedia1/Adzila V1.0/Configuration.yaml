@@ -114,7 +114,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 proxy-groups:
-  - name: 🌐_CLASH
+  - name: 🌍CLASH
     type: select
     disable-udp: false
     use:
@@ -126,13 +126,17 @@ proxy-groups:
       - PEnam
       - PGame
     proxies:
-      - ♻️_AUTO
-      - FALLBACK
-      - 🔠_BALANCED
+      - ♻️AUTO
+      - 🔁FALLBACK
+      - ⚖️BALANCED
+      - 📱SOSMED
+      - 🎮Gaming
+      - ➡️LANGSUNG
+      - 🚫TOLAK
       - DIRECT
       - REJECT
 #
-  - name: ♻️_AUTO
+  - name: ♻️AUTO
     type: url-test
     disable-udp: false
     use:
@@ -146,7 +150,7 @@ proxy-groups:
     tolerance: 50
     url: http://www.gstatic.com/generate_204
 #
-  - name: FALLBACK
+  - name: 🔁FALLBACK
     type: fallback
     disable-udp: false
     use:
@@ -160,7 +164,7 @@ proxy-groups:
     lazy: false
     url: http://www.gstatic.com/generate_204
 #
-  - name: 🔠_BALANCED
+  - name: ⚖️BALANCED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -174,7 +178,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: SOSMED
+  - name: 📱SOSMED
     type: load-balance
     strategy: consistent-hashing
     disable-udp: false
@@ -185,7 +189,7 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: 🎮_Gaming
+  - name: 🎮Gaming
     type: select
     disable-udp: false
     use:
@@ -193,21 +197,21 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: LANGSUNG
+  - name: ➡️LANGSUNG
     type: select
     disable-udp: false
     proxies:
       - DIRECT
-      - 🌐_CLASH
+      - 🌍CLASH
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
-  - name: TOLAK
+  - name: 🚫TOLAK
     type: select
     disable-udp: false
     proxies:
       - REJECT
-      - 🌐_CLASH
+      - 🌍CLASH
     interval: 300
     url: http://www.gstatic.com/generate_204
 #
@@ -266,30 +270,30 @@ rule-providers:
 rules:
   - GEOIP,IR,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,LANGSUNG
-  - IP-CIDR,100.64.0.0/10,LANGSUNG
-  - IP-CIDR,127.0.0.0/8,LANGSUNG
-  - IP-CIDR,169.254.0.0/8,LANGSUNG
-  - IP-CIDR,172.16.0.0/12,LANGSUNG
-  - IP-CIDR,192.168.0.0/16,LANGSUNG
-  - IP-CIDR,224.0.0.0/3,LANGSUNG
-  - IP-CIDR6,::1/128,LANGSUNG
-  - IP-CIDR6,fc00::/7,LANGSUNG
-  - IP-CIDR6,fe80::/10,LANGSUNG
-  - IP-CIDR6,fd00::/8,LANGSUNG
-  - RULE-SET,Direct,LANGSUNG
-  - RULE-SET,Reject,TOLAK
-  - RULE-SET,Sosmed,SOSMED
-  - RULE-SET,Streaming,🔠_BALANCED
-  - RULE-SET,Youtube,🔠_BALANCED
-  - RULE-SET,GameClassical,🎮_Gaming
-  - RULE-SET,GameDomain,🎮_Gaming
-  - RULE-SET,GameUdp,🎮_Gaming
-  - RULE-SET,GameTcp,🎮_Gaming
-  - DST-PORT,3478,🌐_CLASH
-  - DST-PORT,4244,🌐_CLASH
-  - DST-PORT,53,🌐_CLASH
-  - DST-PORT,40020,🌐_CLASH
-  - DST-PORT,57923,🌐_CLASH
-  - RULE-SET,Global,🌐_CLASH
-  - MATCH,🌐_CLASH
+  - IP-CIDR,10.0.0.0/8,➡️LANGSUNG
+  - IP-CIDR,100.64.0.0/10,➡️LANGSUNG
+  - IP-CIDR,127.0.0.0/8,➡️LANGSUNG
+  - IP-CIDR,169.254.0.0/8,➡️LANGSUNG
+  - IP-CIDR,172.16.0.0/12,➡️LANGSUNG
+  - IP-CIDR,192.168.0.0/16,➡️LANGSUNG
+  - IP-CIDR,224.0.0.0/3,➡️LANGSUNG
+  - IP-CIDR6,::1/128,➡️LANGSUNG
+  - IP-CIDR6,fc00::/7,➡️LANGSUNG
+  - IP-CIDR6,fe80::/10,➡️LANGSUNG
+  - IP-CIDR6,fd00::/8,➡️LANGSUNG
+  - RULE-SET,Direct,➡️LANGSUNG
+  - RULE-SET,Reject,🚫TOLAK
+  - RULE-SET,Sosmed,📱SOSMED
+  - RULE-SET,Streaming,⚖️BALANCED
+  - RULE-SET,Youtube,⚖️BALANCED
+  - RULE-SET,GameClassical,🎮Gaming
+  - RULE-SET,GameDomain,🎮Gaming
+  - RULE-SET,GameUdp,🎮Gaming
+  - RULE-SET,GameTcp,🎮Gaming
+  - DST-PORT,3478,🌍CLASH
+  - DST-PORT,4244,🌍CLASH
+  - DST-PORT,53,🌍CLASH
+  - DST-PORT,40020,🌍CLASH
+  - DST-PORT,57923,🌍CLASH
+  - RULE-SET,Global,🌍CLASH
+  - MATCH,🌍CLASH
