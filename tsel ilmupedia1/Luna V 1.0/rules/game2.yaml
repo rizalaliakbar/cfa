@@ -1,16 +1,16 @@
 payload:
-  # FreeFire
+# > FreeFire
   - DOMAIN-KEYWORD,freefire
-  # CoC
+# > CoC
   - DOMAIN-SUFFIX,clashofclans.com
-  # Clash Royal
+# > Clash Royal
   - DOMAIN-SUFFIX,clashroyale.com
   - DOMAIN-SUFFIX,clashroyaleapp.com
-  # Supercell
+# > Supercell
   - DOMAIN-SUFFIX,supercell.com
   - DOMAIN-SUFFIX,supercell.helpshift.com
   - DOMAIN-SUFFIX,supercell.net
-  # PUBG
+# > PUBG
   - DOMAIN-SUFFIX,api.club.gpubgm.com
   - DOMAIN-SUFFIX,pubgmobile.com
   - DOMAIN-SUFFIX,igamecj.com
@@ -19,7 +19,7 @@ payload:
   - IP-CIDR,150.109.124.0/23
   - IP-CIDR,49.51.228.0/23
   - IP-CIDR,170.106.102.0/24
-  # MLBB
+# > MLBB
   - DOMAIN-SUFFIX,mobilelegends.com
   - DOMAIN-SUFFIX,mobilelegends.ca
   - DOMAIN-SUFFIX,mobilelegends.cn
