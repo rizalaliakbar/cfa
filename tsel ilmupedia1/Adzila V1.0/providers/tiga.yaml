@@ -1,16 +1,16 @@
 proxies:
-  - name: 🇬🇧 GB-1
+  - name: 🇸🇬 SG-3
     server: 104.26.7.171 #104.18.25.139
     port: 443
     type: vless
-    uuid: 775213ac-3976-439a-8977-3277c0e4735d
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fq521.6789.cloudns.be
+    servername: a.ssll.gay
     network: ws
     ws-opts:
-      path: /wss/twitterfreecodes
+      path: /twitter苏小柠
       headers:
-        Host: fq521.6789.cloudns.be
+        Host: a.ssll.gay
     udp: true
