@@ -1,16 +1,16 @@
 proxies:
-  - name: 🇸🇬 SG-3
-    server: 104.26.7.171 #104.18.25.139
+  - name: 🇮🇩 ID-2
+    server: 104.18.25.139 #104.18.25.139
     port: 443
     type: vless
-    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: a.ssll.gay
+    servername: cfed.tgzdyz2.top
     network: ws
     ws-opts:
-      path: /twitter苏小柠
+      path: /wss/tg@zdyz2
       headers:
-        Host: a.ssll.gay
+        Host: cfed.tgzdyz2.top
     udp: true
