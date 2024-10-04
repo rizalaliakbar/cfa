@@ -1,5 +1,5 @@
 proxies:
-  - name: 🇪🇽 NA-2
+  - name: 🇺🇸 US-1
     server: 104.18.25.139
     port: 443
     type: trojan
