@@ -1,5 +1,5 @@
 proxies:
-  - name: 🇺🇸 US-1
+  - name: 🇸🇬 SG-3
     server: 104.26.7.171 #104.18.25.139
     port: 443
     type: vless
