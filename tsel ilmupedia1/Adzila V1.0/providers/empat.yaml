@@ -1,5 +1,5 @@
 proxies:
-  - name: 🇩🇪 DE-1
+  - name: 🇮🇩 ID-2
     server: 104.18.25.139 #104.26.7.171
     port: 443
     type: vless
