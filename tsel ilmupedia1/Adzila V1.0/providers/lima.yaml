@@ -1,6 +1,6 @@
 proxies:
   - name: 🇺🇸 US-1
-    server: chat.sociomile.com #104.26.7.171 #104.18.25.139
+    server: 104.26.7.171 #104.18.25.139
     port: 443
     type: vless
     uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
